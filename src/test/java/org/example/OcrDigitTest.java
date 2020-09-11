@@ -133,6 +133,17 @@ public class OcrDigitTest {
     }
 
     @Test
+    void shouldParseSixAlternate() throws OcrException {
+        OcrDigit digit = new OcrDigit();
+
+        digit.setRow(0, "   ");
+        digit.setRow(1, "|_ ");
+        digit.setRow(2, "|_|");
+
+        assertEquals('6', digit.getDigit());
+    }
+
+    @Test
     void shouldParseSeven() throws OcrException {
         OcrDigit digit = new OcrDigit();
 
@@ -161,6 +172,17 @@ public class OcrDigitTest {
         digit.setRow(0, " _ ");
         digit.setRow(1, "|_|");
         digit.setRow(2, " _|");
+
+        assertEquals('9', digit.getDigit());
+    }
+
+    @Test
+    void shouldParseNineAlternate() throws OcrException {
+        OcrDigit digit = new OcrDigit();
+
+        digit.setRow(0, " _ ");
+        digit.setRow(1, "|_|");
+        digit.setRow(2, "  |");
 
         assertEquals('9', digit.getDigit());
     }

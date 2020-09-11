@@ -80,6 +80,9 @@ public class OcrDigit {
         final char[][] six = new char[][]{{' ', '_', ' '}, {'|', '_', ' '}, {'|', '_', '|'}};
         templates.put(six, '6');
 
+        final char[][] sixAlternate = new char[][]{{' ', ' ', ' '}, {'|', '_', ' '}, {'|', '_', '|'}};
+        templates.put(sixAlternate, '6');
+
         final char[][] seven = new char[][]{{' ', '_', ' '}, {' ', ' ', '|'}, {' ', ' ', '|'}};
         templates.put(seven, '7');
 
@@ -88,5 +91,8 @@ public class OcrDigit {
 
         final char[][] nine = new char[][]{{' ', '_', ' '}, {'|', '_', '|'}, {' ', '_', '|'}};
         templates.put(nine, '9');
+
+        final char[][] nineAlternate = new char[][]{{' ', '_', ' '}, {'|', '_', '|'}, {' ', ' ', '|'}};
+        templates.put(nineAlternate, '9');
     }
 }
