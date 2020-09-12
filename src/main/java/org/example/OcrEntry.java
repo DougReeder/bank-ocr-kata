@@ -31,6 +31,8 @@ public class OcrEntry {
         for (int rowNum=0; rowNum<3; ++rowNum) {
             String row = lines[rowNum];
             int numDigits = row.length() / 3;
+            // TODO: pad row with spaces to make a round number of digits
+            // as long as the longest row
 
             for (int d=ocrDigits.size(); d<numDigits; ++d) {
                 ocrDigits.add(new OcrDigit());
